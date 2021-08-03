@@ -1,0 +1,27 @@
+//20BCI0084
+//Aditya K Iyer
+//Factorial using recursion
+#include<stdio.h>
+#include<stdlib.h>
+int fact (int n)
+{
+    unsigned int f;
+    if ((n == 0) || (n == 1))
+        return (n);
+    else
+        f = n * fact (n - 1); 
+        return (f);
+}
+main ()
+{
+    int i, n;
+    printf ("Enter the Number :");
+    scanf ("%d", & n);
+    for (i = 0; i < 30; i++)
+    printf ("_");printf ("\n\n");
+    printf ("Factorial of Number %d is %d\n", n, fact (n));
+    for (i = 0; i < 30; i++)
+    printf ("_");printf ("\n\n");
+    system ("PAUSE");
+    return 0;
+}
