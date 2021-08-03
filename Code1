@@ -1,0 +1,31 @@
+//20BCI0084
+//Aditya K Iyer
+//Code for finding kth smallest element in an array
+#include<stdio.h>
+int main()
+{
+    int data[20];
+    int num,k,i,c;
+    printf("Enter number of elements\n");
+    scanf("%d",&num);
+    printf("Enter elements\n");
+    for(i=0;i<num;i++)
+    {
+                 scanf("%d",&data[i]);           
+    } 
+    printf("Enter k\n");
+    scanf("%d",&k);
+    c=1;
+    for(i=1;i<num;i++)
+    {
+                      if(c==k)
+                      {
+                              printf("kth Smallest with k=%d is %d",k,data[i-1]);
+                              break;
+                      }
+                      if(data[i]!=data[i-1])
+                              c++;
+    }
+	scanf("%d",&i);
+	return 0;  
+}
